@@ -1,0 +1,68 @@
+        .bg-custom {
+            background-color: #ED1C24;
+        }
+        
+        .input-lg {
+            height: 46px;
+            padding: 10px 16px;
+            font-size: 18px;
+            line-height: 1.3333333;
+            border-radius: 6px;
+        }
+        
+        .button-custom {
+            background-color: #10cc10;
+            border-radius: 6px;
+        }
+        
+        .bg-custom-truck {
+            background-color: #f5e7e7;
+        }
+        
+        .truck-container {
+            height: 120px;
+            position: relative;
+            width: 100%;
+        }
+        
+        .inner-shadow {
+            box-shadow: inset 0px 11px 8px -10px #ccc, inset 0px -11px 8px -10px #ccc;
+        }
+        
+        .truck-image {
+            max-width: 290px;
+            position: relative;
+            height: 120px;
+            background-image: url(/images/junk-king-truck.png);
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            background-size: contain;
+        }
+        /* .progress-bar {
+            max-width: 90px; 
+            position: relative;
+            height: 64px;
+            width: 290px;
+        } */
+        
+        .progress {
+            position: relative;
+            /* width: 157px; */
+            width: 55%;
+            height: 52.5%;
+            right: -42%;
+            top: 8px;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+        
+        .progress-bar {
+            background-color: #ED1C24;
+            position: absolute;
+            width: 157px;
+            height: 100%;
+            /* right: 35px;
+            top: 8px; */
+            overflow: hidden;
+            border-radius: 4px;
+        }
