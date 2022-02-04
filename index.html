@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style.css" />
+
     <title>Price Estimators</title>
 </head>
 
@@ -21,46 +23,30 @@
             <h1 id="ctl00_BannerContent_BannerH1">Pricing Estimator</h1>
             <p>Click the green button to get started!</p>
             <div class="btn-group btn-group-lg btn-group p-3" role="group">
-                <a class="btn btn-default btn-success" role="button" id="launch-modal" data-bs-toggle="modal" data-bs-target="#peModal">Launch Pricing Estimator</a
-          >
+                <a class="btn btn-default btn-success" role="button" id="launch-modal" data-bs-toggle="modal" data-bs-target="#peModal">Launch Pricing Estimator</a>
+            </div>
         </div>
-      </div>
     </div>
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="peModal"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-custom text-white text-center p-0">
-          <!-- Modal Header Start -->
-          <div
-            class="modal-header border-0 d-flex justify-content-between align-items-center"
-          >
-            <button type="button" class="btn border-0 p-0 m-0 bg-none">
-              <i class="fa fa-chevron-left" style="font-size: 14px"></i>
-            </button>
-            <p class="p-0 m-0">
-              <span><i class="fas fa-crown"></i></span> 1-888-888-JUNK
-            </p>
-            <!-- Close Button -->
-            <button
-              type="button"
-              class="btn-close border-0 p-0 m-0"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <!-- Modal Header End -->
+    <div class="modal fade" id="peModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-custom text-white text-center p-0">
+                <!-- Modal Header Start -->
+                <div class="modal-header border-0 d-flex justify-content-between align-items-center">
+                    <button type="button" class="btn border-0 p-0 m-0 bg-none">
+            <i class="fa fa-chevron-left" style="font-size: 14px"></i>
+          </button>
+                    <p class="p-0 m-0">
+                        <span><i class="fas fa-crown"></i></span> 1-888-888-JUNK
+                    </p>
+                    <!-- Close Button -->
+                    <button type="button" class="btn-close border-0 p-0 m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Header End -->
 
-          <!-- Modal Body Start Step - 1 -->
-          <!-- <div class="modal-body step step-1 p-md-5" id="choose-zipcode">
+                <!-- Modal Body Start Step - 1 -->
+                <!-- <div class="modal-body step step-1 p-md-5" id="choose-zipcode">
             <div class="container-fluid mt-5">
               <h2>What&#39;s Your Zip Code?</h2>
               <div class="row">
@@ -98,10 +84,10 @@
               </p>
             </div>
           </div> -->
-          <!-- Modal Body End Step - 1 -->
+                <!-- Modal Body End Step - 1 -->
 
-          <!-- Modal Body Start Step - 3 -->
-          <!-- <div class="modal-body step step-3 p-0 m-0" id="choose-zipcode">
+                <!-- Modal Body Start Step - 3 -->
+                <!-- <div class="modal-body step step-3 p-0 m-0" id="choose-zipcode">
             <div class="container-fluid">
               <div class="row header-block">
                 <div class="col-md-12 p-0 m-0">
@@ -175,10 +161,10 @@
               </div>
             </div>
           </div> -->
-          <!-- Modal Body End Step - 3 -->
+                <!-- Modal Body End Step - 3 -->
 
-          <!-- Modal Boddy Start step - 4 -->
-          <!-- <div
+                <!-- Modal Boddy Start step - 4 -->
+                <!-- <div
             class="modal-body step step-5"
             id="service-ai-basic-info"
             style="display: block"
@@ -241,10 +227,10 @@
               </p>
             </div>
           </div> -->
-          <!-- Modal Boddy End step - 4 -->
+                <!-- Modal Boddy End step - 4 -->
 
-          <!-- Modal Body - Step 5 Start Load by truck -->
-          <!-- <div
+                <!-- Modal Body - Step 5 Start Load by truck -->
+                <!-- <div
             class="modal-body step step-5"
             id="service-truckloads"
             style="display: block"
@@ -396,171 +382,170 @@
               </div>
             </div>
           </div> -->
-          <!-- Modal Body - Step 5 End Load by truck -->
+                <!-- Modal Body - Step 5 End Load by truck -->
 
-          <!-- Modal Body - Step 6 Start Load by Items -->
-          <div
-            class="modal-body step step-6"
-            id="load-by-items"
-            style="display: block"
-          >
-            <div class="container-fluid text-light">
-              <div class="row p-0 m-0">
-                <div class="col-12 col-md-6 p-0 m-0">
-                  <h2 class="p-0 m-0 fw-bold text-center text-md-start">
-                    Add Your Items
-                  </h2>
-                </div>
-                <div class="col-6 p-0 m-0">
-                  <p class="pt-3 m-0 text-end d-none d-md-block">
-                    Tap the +/- buttons to add/remove
-                  </p>
-                </div>
-                <div class="col-8 text-start p-0 m-0">
-                  <h5 class="p-0 m-0">
-                    <i class="fa fa-map-marker"></i>
-                    <span id="location">Junk King San Antonio Northwest</span>
-                    (<span id="zip-code">78238</span>)
-                  </h5>
-                </div>
-                <div class="col-4 p-0 m-0 text-end">
-                  <button
-                    class="btn text-light border-0"
-                    data-toggle="dropdown"
-                    aria-expanded="false"
-                    type="button"
-                  >
-                    My Items&nbsp;
-                    <i
-                      class="fa fa-chevron-circle-down"
-                      style="margin-left: 8"
-                    ></i>
-                  </button>
-                </div>
-
-                <!-- Item Categories Slider Start -->
-                <div class="col-md-12">
-                  <div class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                      <!-- Categories 1 Start -->
-                      <div class="carousel-item active">
-                        <div class="p-0" style="width: 10rem">
-                          <img
-                            class="bg-light border-0 rounded-3"
-                            src="/images/ico_Couches_and_Chairs.png"
-                          />
-                          <h6 class="card-title bg-custom m-0">
-                            Couches &amp; Chairs
-                          </h6>
+                <!-- Modal Body - Step 6 Start Load by Items -->
+                <!-- <div class="modal-body step step-5" id="service-truckloads" style="display: block">
+                    <div class="container-fluid text-light">
+                        <div class="row p-0 m-0">
+                            <div class="col-12 col-md-6 p-0 m-0">
+                                <h2 class="p-0 m-0 fw-bold text-center text-md-start">
+                                    How Many Loads?
+                                </h2>
+                            </div>
+                            <div class="col-6 p-0 m-0">
+                                <p class="pt-3 m-0 text-end d-none d-md-block">
+                                    Tap the +/- buttons to add/remove
+                                </p>
+                            </div>
+                            <div class="col-8 text-start p-0 m-0">
+                                <h5 class="p-0 m-0">
+                                    <i class="fa fa-map-marker"></i>
+                                    <span id="location">Junk King San Antonio Northwest</span> (
+                                    <span id="zip-code">78238</span>)
+                                </h5>
+                            </div>
+                            <div class="col-4 p-0 m-0 text-end">
+                                <button class="btn text-light border-0" data-toggle="dropdown" aria-expanded="false" type="button">
+                  My Items&nbsp;
+                  <i class="fa fa-chevron-circle-down" style="margin-left: 8"></i>
+                </button>
+                            </div>
                         </div>
-                      </div>
-                      <!-- Categories 1 End -->
+                        <div class="row p-0 m-0">
+                            
+                <div class="container-fluid-md text-center p-0 m-0">
+                    <div class="swiper mySwiper p-0 m-0">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
 
-                      <!-- Categories 2 Start -->
-                      <div class="carousel-item">
-                        <div class="p-0" style="width: 10rem">
-                          <img
-                            class="bg-light border-0 rounded-3"
-                            src="/images/ico_Tables_and_Dressers.png"
-                          />
-                          <h6 class="card-title bg-custom m-0">
-                            Tables &amp; Dressers
-                          </h6>
+                        <div class="swiper-wrapper ps-3 p-0 m-0">
+                            <div class="swiper-slide">
+                                <div class="lslide" style="width: 127.5px; margin-right: 10px">
+                                    <a href="#" data-category="Couches &amp; Chairs" data-slide="0" class="cat-slide active"><img class="img-responsive" src="/images/ico_Couches_and_Chairs.png" /></a><span>Couches &amp;
+                    Chairs</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="lslide" style="width: 127.5px; margin-right: 10px">
+                                    <a href="#" data-category="Tables &amp; Dressers" data-slide="1" class="cat-slide"><img class="img-responsive" src="/images/ico_Tables_and_Dressers.png" /></a><span>Tables &amp;
+                    Dressers</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="lslide active" style="width: 127.5px; margin-right: 10px">
+                                    <a href="#" data-category="Electronics" data-slide="2" class="cat-slide"><img class="img-responsive" src="/images/ico_electronics.png" /></a><span>Electronics</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="lslide" style="width: 127.5px; margin-right: 10px">
+                                    <a href="#" data-category="Appliances" data-slide="3" class="cat-slide"><img class="img-responsive" src="/images/ico_appliances.png" /></a><span>Appliances</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="lslide" style="width: 127.5px; margin-right: 10px">
+                                    <a href="#" data-category="Mattresses" data-slide="4" class="cat-slide"><img class="img-responsive" src="/images/ico_Mattresses.png" /></a><span>Mattresses</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="lslide" style="width: 127.5px; margin-right: 10px">
+                                    <a href="#" data-category="Miscellaneous" data-slide="5" class="cat-slide"><img class="img-responsive" src="/images/ico_miscellaneous.png" /></a><span>Miscellaneous</span>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <!-- Categories 2 End -->
-                      <!--                       
+                    </div>
+                </div>
+            </div>
 
-                        <li
-                          class="lslide"
-                          style="width: 127.5px; margin-right: 10px"
-                        >
-                          <a
-                            href="#"
-                            data-category="Tables &amp; Dressers"
-                            data-slide="1"
-                            class="cat-slide"
-                            ><img
-                              class="img-responsive"
-                              src="/images/ico_Tables_and_Dressers.png" /></a
-                          ><span>Tables &amp; Dressers</span>
-                        </li>
-                        <li
-                          class="lslide"
-                          style="width: 127.5px; margin-right: 10px"
-                        >
-                          <a
-                            href="#"
-                            data-category="Electronics"
-                            data-slide="2"
-                            class="cat-slide"
-                            ><img
-                              class="img-responsive"
-                              src="/images/ico_electronics.png" /></a
-                          ><span>Electronics</span>
-                        </li>
-                        <li
-                          class="lslide"
-                          style="width: 127.5px; margin-right: 10px"
-                        >
-                          <a
-                            href="#"
-                            data-category="Appliances"
-                            data-slide="3"
-                            class="cat-slide"
-                            ><img
-                              class="img-responsive"
-                              src="/images/ico_appliances.png" /></a
-                          ><span>Appliances</span>
-                        </li>
-                        <li
-                          class="lslide"
-                          style="width: 127.5px; margin-right: 10px"
-                        >
-                          <a
-                            href="#"
-                            data-category="Mattresses"
-                            data-slide="4"
-                            class="cat-slide"
-                            ><img
-                              class="img-responsive"
-                              src="/images/ico_Mattresses.png" /></a
-                          ><span>Mattresses</span>
-                        </li>
-                        <li
-                          class="lslide"
-                          style="width: 127.5px; margin-right: 10px"
-                        >
-                          <a
-                            href="#"
-                            data-category="Miscellaneous"
-                            data-slide="5"
-                            class="cat-slide"
-                            ><img
-                              class="img-responsive"
-                              src="/images/ico_miscellaneous.png" /></a
-                          ><span>Miscellaneous</span>
-                        </li>
-                      </ul> -->
-                      <div class="lSAction" style="display: block">
-                        <a class="lSPrev"></a>
-                <a class="lSNext"></a>
+            <div class="bg-light row m-0 p-0 mt-2 text-dark">
+                <div class="col-9">
+                    <h3 class="text-start">
+                        <span class="hidden-sm">Your </span>Estimate:
+                        <span class="text-danger" id="estemeted-rate">$218-$248</span>
+                    </h3>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-danger btn-sm btn-reset btn-reset-tl" type="button" onclick="resetTruckloadsView();">
+            <span>Clear&nbsp;</span><span class="hidden-xs">Items&nbsp;</span><i class="fa fa-rotate-left jk-red"></i>
+          </button>
+                </div>
+            </div>
+
+            <div id="item_list" class="col-12 row p-0 m-0 bg-custom-truck inner-shadow p-5 text-dark">
+                <div class="col-6 row border-dark border-bottom p-0 m-0">
+                    <div class="col-6 p-0 m-0">
+                        <h5 class="text-start"><span id="dryer_count">0</span> Dryer</h5>
+                    </div>
+                    <div class="col-6 text-end p-0 m-0">
+                        <div class="btn-group" role="group">
+                            <button class="btn border-0">
+                <i class="fal fa-minus"></i>
+              </button>
+
+                            <button class="btn border-0">
+                <i class="fas fa-plus-square text-danger"></i>
+              </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row pt-3">
+                <div class="col-sm-6">
+                    <h3 class="m-0 fw-bold">
+                        Book Now &amp;&nbsp;<span class="text-warning">Save $<span
+                class="online-discount-amount jk-gold">20</span>!</span>
+                        <span>*</span>
+                    </h3>
+                    <p class="small m-0">* excludes jobs $99 and under</p>
+                </div>
+                <div class="col-sm-6">
+                    <button class="btn button-custom w-100 p-1 mt-1 text-light fw-bold" id="btn-book-jk-truck" type="button" onclick="sendEvent('#peModal',7, &quot;forward&quot;)">
+            Pick These Up!
+          </button>
+                </div>
+            </div>
+        </div> -->
+                <!-- Modal Body - Step 6 End Load by Items -->
+
             </div>
         </div>
-    </div>
-    </div>
-    <!-- Item Categories Slider End -->
-    </div>
-    </div>
-    </div>
-    <!-- Modal Body - Step 6 End Load by Items -->
-    </div>
-    </div>
-    </div>
 
-    <!-- END: NEW PRICING ESTIMATOR MODALS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <!-- END: NEW PRICING ESTIMATOR MODALS -->
+        <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js " integrity=" sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB " crossorigin=" anonymous "></script>
+        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js " integrity=" sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13 " crossorigin=" anonymous "></script>
+
+        <!-- Swiper JS -->
+        <script src=" https://unpkg.com/swiper/swiper-bundle.min.js "></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper(" .mySwiper ", {
+                slidesPerView: 1,
+                spaceBetween: 10,
+                slidesPerGroup: 1,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                pagination: {
+                    el: " .swiper-pagination ",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: " .swiper-button-next ",
+                    prevEl: " .swiper-button-prev ",
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 10,
+                    },
+                },
+            });
+        </script>
 </body>
 
 </html>
